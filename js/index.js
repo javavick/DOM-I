@@ -42,7 +42,7 @@ const siteContent = {
   }
 };
 
-/*========== NAV ==========*/
+/*==================== NAV ====================*/
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
@@ -56,7 +56,7 @@ for (let loop = 0; loop < navAnchors.length; loop++) {
   navAnchors[loop].style.fontWeight = "bold";
 }
 
-/*========== CTA ==========*/
+/*==================== CTA ====================*/
 
 // cta-text
 document.querySelector(".cta-text").style.marginLeft = "200px";
@@ -76,3 +76,61 @@ document.querySelector(".cta-text button").textContent = siteContent.cta.button;
 document
   .getElementById("cta-img")
   .setAttribute("src", siteContent.cta["img-src"]);
+
+/*==================== MAIN CONTENT ====================*/
+
+/*========== TOP ==========*/
+
+// Divs (text-content)
+let topDivs = document.querySelectorAll(".top-content .text-content");
+
+topDivs.forEach(function(atr) {
+  atr.style.width = "438px";
+});
+
+// h4
+let topHeadings = document.querySelectorAll(".top-content .text-content h4");
+
+topHeadings[0].textContent = siteContent["main-content"]["features-h4"];
+topHeadings[1].textContent = siteContent["main-content"]["about-h4"];
+
+// p
+let topParagraphs = document.querySelectorAll(".top-content .text-content p");
+
+topParagraphs[0].textContent = siteContent["main-content"]["features-content"];
+topParagraphs[1].textContent = siteContent["main-content"]["about-content"];
+
+/*========== MIDDLE ==========*/
+
+document
+  .getElementById("middle-img")
+  .setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+/*========== BOTTOM ==========*/
+
+// Divs (text-content)
+let bottomDivs = document.querySelectorAll(".bottom-content .text-content");
+
+bottomDivs.forEach(function(atr) {
+  atr.style.width = "290px";
+});
+
+// h4
+let bottomHeadings = document.querySelectorAll(
+  ".bottom-content .text-content h4"
+);
+
+bottomHeadings[0].textContent = siteContent["main-content"]["services-h4"];
+bottomHeadings[1].textContent = siteContent["main-content"]["product-h4"];
+bottomHeadings[2].textContent = siteContent["main-content"]["vision-h4"];
+
+// p
+let bottomParagraphs = document.querySelectorAll(
+  ".bottom-content .text-content p"
+);
+
+bottomParagraphs[0].textContent =
+  siteContent["main-content"]["services-content"];
+bottomParagraphs[1].textContent =
+  siteContent["main-content"]["product-content"];
+bottomParagraphs[2].textContent = siteContent["main-content"]["vision-content"];
