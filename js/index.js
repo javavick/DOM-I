@@ -44,6 +44,10 @@ const siteContent = {
 
 /*==================== NAV ====================*/
 
+// Nav
+let nav = document.querySelector("nav");
+nav.style.fontWeight = "bold";
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
@@ -52,9 +56,26 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 let navAnchors = document.querySelectorAll("nav a");
 
 for (let loop = 0; loop < navAnchors.length; loop++) {
-  navAnchors[loop].textContent = siteContent.nav[`nav-item-${loop + 1}`];
-  navAnchors[loop].style.fontWeight = "bold";
+  navAnchors[loop].textContent = siteContent["nav"][`nav-item-${loop + 1}`];
+  navAnchors[loop].style.color = "green";
 }
+
+// New Anchor Elements
+let autobots = document.createElement("a");
+
+autobots.textContent = "Autobots";
+autobots.setAttribute("href", "#");
+autobots.style.color = "green";
+
+let decepticons = document.createElement("a");
+
+decepticons.textContent = "Decepticons";
+decepticons.setAttribute("href", "#");
+decepticons.style.color = "green";
+
+// appendChild() + prepend()
+nav.appendChild(decepticons);
+nav.prepend(autobots);
 
 /*==================== CTA ====================*/
 
@@ -62,20 +83,21 @@ for (let loop = 0; loop < navAnchors.length; loop++) {
 document.querySelector(".cta-text").style.marginLeft = "200px";
 
 // h1
-siteContent.cta["h1"] = "DOM\nIs\nAwesome";
+siteContent["cta"]["h1"] = "DOM\nIs\nAwesome";
 
 let ctaHeading = document.querySelector(".cta-text h1");
 
-ctaHeading.textContent = siteContent.cta.h1;
+ctaHeading.textContent = siteContent["cta"]["h1"];
 ctaHeading.style.whiteSpace = "pre-line";
 
 // Button
-document.querySelector(".cta-text button").textContent = siteContent.cta.button;
+document.querySelector(".cta-text button").textContent =
+  siteContent["cta"]["button"];
 
 // Image
 document
   .getElementById("cta-img")
-  .setAttribute("src", siteContent.cta["img-src"]);
+  .setAttribute("src", siteContent["cta"]["img-src"]);
 
 /*==================== MAIN CONTENT ====================*/
 
