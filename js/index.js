@@ -144,6 +144,19 @@ document.querySelector(".contact h4").textContent =
 // Paragraphs
 let contactParagraphs = document.querySelectorAll(".contact p");
 
+// Address
+siteContent["contact"]["address"] = "123 Way 456 Street\nSomewhere, USA";
+
 contactParagraphs[0].textContent = siteContent["contact"]["address"];
+contactParagraphs[0].style.whiteSpace = "pre-line";
+
+// Phone
 contactParagraphs[1].textContent = siteContent["contact"]["phone"];
+
+// Email
 contactParagraphs[2].textContent = siteContent["contact"]["email"];
+
+/*==================== FOOTER ====================*/
+
+document.querySelector("footer p").textContent =
+  siteContent["footer"]["copyright"];
