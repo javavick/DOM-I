@@ -94,7 +94,7 @@ let topHeadings = document.querySelectorAll(".top-content .text-content h4");
 topHeadings[0].textContent = siteContent["main-content"]["features-h4"];
 topHeadings[1].textContent = siteContent["main-content"]["about-h4"];
 
-// p
+// Paragraph
 let topParagraphs = document.querySelectorAll(".top-content .text-content p");
 
 topParagraphs[0].textContent = siteContent["main-content"]["features-content"];
@@ -124,7 +124,7 @@ bottomHeadings[0].textContent = siteContent["main-content"]["services-h4"];
 bottomHeadings[1].textContent = siteContent["main-content"]["product-h4"];
 bottomHeadings[2].textContent = siteContent["main-content"]["vision-h4"];
 
-// p
+// Paragraph
 let bottomParagraphs = document.querySelectorAll(
   ".bottom-content .text-content p"
 );
@@ -134,3 +134,16 @@ bottomParagraphs[0].textContent =
 bottomParagraphs[1].textContent =
   siteContent["main-content"]["product-content"];
 bottomParagraphs[2].textContent = siteContent["main-content"]["vision-content"];
+
+/*==================== CONTACT ====================*/
+
+// h4
+document.querySelector(".contact h4").textContent =
+  siteContent["contact"]["contact-h4"];
+
+// Paragraphs
+let contactParagraphs = document.querySelectorAll(".contact p");
+
+contactParagraphs[0].textContent = siteContent["contact"]["address"];
+contactParagraphs[1].textContent = siteContent["contact"]["phone"];
+contactParagraphs[2].textContent = siteContent["contact"]["email"];
