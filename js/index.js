@@ -56,4 +56,23 @@ for (let loop = 0; loop < navAnchors.length; loop++) {
   navAnchors[loop].style.fontWeight = "bold";
 }
 
-/*========== TOP CONTENT ==========*/
+/*========== CTA ==========*/
+
+// cta-text
+document.querySelector(".cta-text").style.marginLeft = "200px";
+
+// h1
+siteContent.cta["h1"] = "DOM\nIs\nAwesome";
+
+let ctaHeading = document.querySelector(".cta-text h1");
+
+ctaHeading.textContent = siteContent.cta.h1;
+ctaHeading.style.whiteSpace = "pre-line";
+
+// Button
+document.querySelector(".cta-text button").textContent = siteContent.cta.button;
+
+// Image
+document
+  .getElementById("cta-img")
+  .setAttribute("src", siteContent.cta["img-src"]);
