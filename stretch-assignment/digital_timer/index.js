@@ -24,6 +24,7 @@ function beginInterval() {
   start.disabled = true;
   start.style.backgroundColor = "rgb(255,103,104,0.3)";
   start.style.color = "rgb(255,255,255,0.3)";
+  start.style.cursor = "default";
 }
 
 // Timer function
@@ -104,6 +105,7 @@ function resetTimer() {
   start.disabled = false;
   start.style.backgroundColor = "rgb(255,103,104)";
   start.style.color = "rgb(255,255,255)";
+  start.style.cursor = "pointer";
 }
 
 // Button events
