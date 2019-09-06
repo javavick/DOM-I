@@ -22,6 +22,8 @@ defaultDisplay();
 function beginInterval() {
   interval = window.setInterval(timer, 10);
   start.disabled = true;
+  start.style.backgroundColor = "rgb(255,103,104,0.3)";
+  start.style.color = "rgb(255,255,255,0.3)";
 }
 
 // Timer function
@@ -47,7 +49,7 @@ function timer() {
 
           digits.forEach((atr) => {
             if (atr != digits[2]) {
-              atr.setAttribute("class", "digit redDigit");
+              atr.style.color = "rgb(255,103,104)";
 
               if (atr != digits[0]) {
                 atr.textContent = 0;
@@ -80,8 +82,8 @@ buttonsDiv.appendChild(reset);
 document.querySelector(".digits").appendChild(buttonsDiv);
 
 // Button text
-start.textContent = "Start";
-reset.textContent = "Reset";
+start.textContent = "START";
+reset.textContent = "RESET";
 
 // Reset function
 function resetTimer() {
@@ -95,13 +97,73 @@ function resetTimer() {
 
   digits.forEach((atr) => {
     if (atr != digits[2]) {
-      atr.setAttribute("class", "digit");
+      atr.style.color = "rgb(255,255,255)";
     }
   });
 
   start.disabled = false;
+  start.style.backgroundColor = "rgb(255,103,104)";
+  start.style.color = "rgb(255,255,255)";
 }
 
 // Button events
 start.addEventListener("click", beginInterval);
 reset.addEventListener("click", resetTimer);
+
+/*==================== STYLING ====================*/
+
+// Body
+let body = document.querySelector("body");
+
+body.style.height = "100vh";
+body.style.margin = "0";
+body.style.padding = "0";
+body.style.backgroundColor = "rgb(23,34,59)";
+
+// Digits
+digits.forEach((atr) => {
+  atr.style.fontSize = "120px";
+  atr.style.color = "rgb(255,255,255)";
+});
+
+// Buttons
+buttonsDiv.style.display = "flex";
+buttonsDiv.style.justifyContent = "space-around";
+
+const buttonsArray = [start, reset];
+
+buttonsArray.forEach((atr) => {
+  atr.style.border = "none";
+  atr.style.padding = "15px 40px";
+  atr.style.fontSize = "14px";
+  atr.style.fontWeight = "bold";
+  atr.style.color = "rgb(255,255,255)";
+  atr.style.borderRadius = "5px";
+  atr.style.outline = "none";
+});
+
+start.style.backgroundColor = "rgb(255,103,104)";
+reset.style.backgroundColor = "rgb(107,119,141)";
+
+// Buttons on Hover and mousedown
+reset.addEventListener("mouseenter", (event) => {
+  event.target.style.backgroundColor = "rgb(38,56,89)";
+});
+reset.addEventListener("mouseleave", (event) => {
+  event.target.style.backgroundColor = "rgb(107,119,141)";
+});
+reset.addEventListener("mousedown", (event) => {
+  event.target.style.backgroundColor = "rgb(30,45,71)";
+  event.target.style.color = "rgb(255,255,255,0.7)";
+});
+reset.addEventListener("mouseup", (event) => {
+  event.target.style.backgroundColor = "rgb(38,56,89)";
+  event.target.style.color = "rgb(255,255,255)";
+});
+
+start.addEventListener("mouseenter", (event) => {
+  event.target.style.backgroundColor = "rgb(255,65,66,0.7)";
+});
+start.addEventListener("mouseleave", (event) => {
+  event.target.style.backgroundColor = "rgb(255,103,104)";
+});
