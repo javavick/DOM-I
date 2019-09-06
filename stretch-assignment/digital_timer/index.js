@@ -157,6 +157,7 @@ reset.addEventListener("mouseenter", (event) => {
 });
 reset.addEventListener("mouseleave", (event) => {
   event.target.style.backgroundColor = "rgb(107,119,141)";
+  event.target.style.color = "rgb(255,255,255)";
 });
 reset.addEventListener("mousedown", (event) => {
   event.target.style.backgroundColor = "rgb(30,45,71)";
@@ -172,6 +173,7 @@ start.addEventListener("mouseenter", (event) => {
 });
 start.addEventListener("mouseleave", (event) => {
   event.target.style.backgroundColor = "rgb(255,103,104)";
+  event.target.style.color = "rgb(255,255,255)";
 });
 start.addEventListener("mousedown", (event) => {
   event.target.style.backgroundColor = "rgb(255,65,66,0.5)";
