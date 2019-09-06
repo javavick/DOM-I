@@ -112,6 +112,9 @@ reset.addEventListener("click", resetTimer);
 
 /*==================== STYLING ====================*/
 
+// Head
+document.querySelector("title").textContent = "10 Second Stopwatch";
+
 // Body
 let body = document.querySelector("body");
 
