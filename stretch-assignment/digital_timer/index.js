@@ -140,6 +140,7 @@ buttonsArray.forEach((atr) => {
   atr.style.color = "rgb(255,255,255)";
   atr.style.borderRadius = "5px";
   atr.style.outline = "none";
+  atr.style.cursor = "pointer";
 });
 
 start.style.backgroundColor = "rgb(255,103,104)";
