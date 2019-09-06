@@ -173,3 +173,7 @@ start.addEventListener("mouseenter", (event) => {
 start.addEventListener("mouseleave", (event) => {
   event.target.style.backgroundColor = "rgb(255,103,104)";
 });
+start.addEventListener("mousedown", (event) => {
+  event.target.style.backgroundColor = "rgb(255,65,66,0.5)";
+  event.target.style.color = "rgb(255,255,255,0.7)";
+});
